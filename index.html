@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Management System</title>
+
+```
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+```
+
+</head>
+
+<body>
+
+<div class="container">
+
+```
+<!-- Sidebar -->
+<aside class="sidebar">
+
+    <h2>💊 MediCare</h2>
+    <p class="subtitle">Pharmacy Management</p>
+
+    <nav>
+        <a href="index.html" class="active">🏠 Dashboard</a>
+        <a href="medicines/medicines.html">💊 Medicine Catalog</a>
+        <a href="stock/stock.html">📦 Stock Management</a>
+        <a href="expiry/expiry.html">⏰ Expiry Tracking</a>
+        <a href="billing/billing.html">🧾 Billing</a>
+        <a href="billing/reports.html">📊 Sales Reports</a>
+    </nav>
+
+    <div class="sidebar-footer">
+        <p>Pharmacy Management System</p>
+        <small>Version 1.0</small>
+    </div>
+
+</aside>
+
+
+<!-- Main Content -->
+<main class="main-content">
+
+    <header class="topbar">
+        <div>
+            <h1>Dashboard</h1>
+            <p>Welcome to MediCare Pharmacy Management System</p>
+            <p id="currentDate"></p>
+        </div>
+
+        <div class="admin">
+            👤 Admin
+        </div>
+    </header>
+
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <h2>Welcome Back, Admin!</h2>
+        <p>Here's what's happening in your pharmacy today.</p>
+    </section>
+
+
+    <!-- Dashboard Cards -->
+    <section class="cards">
+
+        <div class="card">
+            <h3>Total Medicines</h3>
+            <h1 id="totalMedicines">2</h1>
+            <p>Registered medicines</p>
+        </div>
+
+        <div class="card">
+            <h3>Available Stock</h3>
+            <h1 id="availableStock">180</h1>
+            <p>Total medicine units</p>
+        </div>
+
+        <div class="card">
+            <h3>Low Stock</h3>
+            <h1 id="lowStock">0</h1>
+            <p>Medicines needing restock</p>
+        </div>
+
+        <div class="card">
+            <h3>Expiring Soon</h3>
+            <h1 id="expiringSoon">0</h1>
+            <p>Medicines nearing expiry</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Sales</h3>
+            <h1 id="totalSales">₹0</h1>
+            <p>Recorded sales</p>
+        </div>
+
+    </section>
+
+
+    <!-- Dashboard Bottom Section -->
+    <section class="dashboard-grid">
+
+        <div class="panel">
+            <h2>Sales Overview</h2>
+            <canvas id="salesChart"></canvas>
+        </div>
+
+        <div class="panel">
+            <h2>Recent Sales</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Medicine</th>
+                        <th>Quantity</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Paracetamol</td>
+                        <td>2</td>
+                        <td>₹40</td>
+                    </tr>
+
+                    <tr>
+                        <td>Vitamin C</td>
+                        <td>1</td>
+                        <td>₹50</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 MediCare Pharmacy Management System
+    </footer>
+
+</main>
+```
+
+</div>
+
+<script src="js/medicines-data.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
