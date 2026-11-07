@@ -191,7 +191,7 @@ grid-template-columns: 1fr;
 flex-direction: column;
 }
 
-```
+
 .sidebar {
     width: 100%;
 }
@@ -204,6 +204,89 @@ flex-direction: column;
     align-items: flex-start;
     gap: 15px;
 }
-```
 
+
+}
+
+/* =================================
+   DASHBOARD IMPROVEMENTS
+================================= */
+
+/* Smooth page appearance */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Card hover effect */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #edf0f4;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
+}
+
+/* Welcome section */
+.welcome {
+    background: linear-gradient(135deg, #123b50, #1d7580);
+}
+
+/* Sidebar navigation */
+.sidebar nav a {
+    font-size: 14px;
+}
+
+/* Admin profile */
+.admin {
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+}
+
+/* Table hover */
+tbody tr:hover {
+    background: #f4f8fa;
+}
+
+/* Chart panel */
+.panel canvas {
+    max-width: 100%;
+}
+
+/* Footer */
+footer {
+    padding: 15px 0;
+}
+
+/* Mobile improvements */
+@media (max-width: 650px) {
+    .sidebar nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+
+    .sidebar nav a {
+        margin-bottom: 0;
+        font-size: 12px;
+        padding: 12px 8px;
+    }
+
+    .topbar h1 {
+        font-size: 24px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h1 {
+        font-size: 24px;
+    }
 }
